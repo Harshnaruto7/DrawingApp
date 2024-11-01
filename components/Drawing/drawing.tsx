@@ -1,5 +1,5 @@
 "use client"
-import react,{useState} from "react"
+import {useState} from "react"
 import { useDraw } from "@/hooks/useDraw";
 import React from "react";
 import {ChromePicker} from "react-color"
@@ -24,7 +24,7 @@ export default function Drawing(){
     const lineColor = color 
     const lineWidth = 5
 
-    let startPoint = prevPoint ?? currentPoint
+    const startPoint = prevPoint ?? currentPoint
     context.beginPath()
     context.lineWidth = lineWidth
     context.strokeStyle = lineColor
